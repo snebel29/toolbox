@@ -29,7 +29,7 @@ $ docker run -it \
 	--rm \
 	-p 127.0.0.1:6666:6666 \
 	--volume ${DIRECTORY}:/data \
-	snebel29/toolbox:v1.1.0 \
+	snebel29/toolbox \
 	http_server -d /data
 ```
 
@@ -39,6 +39,8 @@ Docker will automatically build and publish the new image remotely upon tagging
 ```
 $ VERSION=v1.1.0
 $ docker build -t snebel29/toolbox:${VERSION} .
+$ git add --all
+$ git commit -m "My change"
 $ git tag ${VERSION}
 $ git push origin master
 ```
