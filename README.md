@@ -27,10 +27,10 @@ Expose files from a directory through http for stubbing and testing
 $ DIRECTORY=$(PWD)
 $ docker run -it \
 	--rm \
-	-p 127.0.0.1:6666:6666 \
+	-p 127.0.0.1:8888:8888 \
 	--volume ${DIRECTORY}:/data \
 	snebel29/toolbox \
-	http_server -d /data
+	http_server -p 8888 -d /data
 ```
 
 ## Build
