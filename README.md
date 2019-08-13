@@ -42,5 +42,5 @@ $ docker build -t snebel29/toolbox:${VERSION} .
 $ git add --all
 $ git commit -m "My change"
 $ git tag ${VERSION}
-$ git push origin master
+$ git push origin master --tags
 ```
