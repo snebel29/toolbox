@@ -3,11 +3,12 @@ Toolbox is a docker container image for diagnosis and troubleshooting, its purpo
 
 ## Usage
 
-Run in terminal interactive mode, mount current directory on `/data` within the docker container instance and join container network namespace
+Run in terminal interactive mode, mount current directory on `/data` within the docker container instance and join container network and pid namespaces (to see processes and network in the same way as the joined container)
 ```
 $ docker run -it \
 	--rm \
 	--volume $(pwd):/data \
+	--pid container:<container-id> \
 	--network container:<container-id> \
 	snebel29/toolbox 
 ```
